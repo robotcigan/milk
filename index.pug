@@ -1,0 +1,137 @@
+extends layout.pug
+
+block content
+  .hero
+    .grid.grid--container
+      header.main-header
+        .main-header__top
+          .main-header__socials.socials
+            a(href="").social
+              i.fa.fa-instagram
+            a(href="").social
+              i.fa.fa-vk
+            a(href="").social
+              i.fa.fa-odnoklassniki
+            a(href="").social
+              i.fa.fa-facebook
+          .main-header__hash Делитесь своими идеями с хештегом 
+            span #проканистру
+          .btn.btn--solid Обратная связь
+        .main-header__nav.nav
+          a(href="").nav__link Почему канистра
+          a(href="").nav__link Вторая жизнь
+          .nav__link
+            .logo
+          a(href="").nav__link Где купить канистру
+          a(href="").nav__link Пишите нам
+
+      h1.hero__title Инновационная упаковка
+      .hero__slider
+        .row.row--sm-center
+          .col.col--sm-3
+            h3.h3.hero__subtitle Йогурт 2.5%
+            .hero__taste Земляника-клубника Вишня-клубника
+            ul.hero__gost
+              li выпускается согласно ГОСТ 31450-2013;
+              li не содержит сухое молоко и консерванты;
+              li поставляется с лучших ферм Краснодарского края.
+
+          .col.col--sm-6
+            .hero__circle
+              .hero__img
+                img(src="img/img-1.png", alt="")
+          .col.col--sm-3
+            .hero__right-side.right-side
+              .right-side__header Масса НЕТТО
+              .right-side__row
+                span 720
+                | грамм
+              .right-side__row
+                span 53
+                | ккал
+              .right-side__row
+                span 2.5%
+                | жирность
+
+  .grid.grid--container
+    h2.h2 Почему канистра?
+    .video
+      iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
+
+    .info.info--offset.row.row--sm-center
+      .col.col--sm-2
+        img(src="img/info-1.jpg", alt="")
+      .col.col--sm-4
+        .info__header Компактность размеров
+        p.info__desc Канистра имеет компактные размеры и легко поместится в холодильнике, не занимая много места
+      .col.col--sm-2
+        img(src="img/info-2.jpg", alt="")
+      .col.col--sm-4
+        .info__header Удобство Формы
+        p.info__desc Продукты удобно наливать через широкое горлышко, а благодаря удобной ручке канистру удобно нести в руках.
+    .info.row.row--sm-center
+      .col.col--sm-4
+        .info__header Экологичность
+        p.info__desc Канистра выполнена из безопасного и качественного материала, который прекрасно сохраняет свежесть и вкус продукта.
+      .col.col--sm-2
+        img(src="img/info-3.jpg", alt="")
+      .col.col--sm-4
+        .info__header Инновационный формат веса
+        p.info__desc Полезных и вкусных продуктов теперь хватит на всю семью.
+      .col.col--sm-2
+        img(src="img/info-4.jpg", alt="")
+
+    h2.h2 Вторая жизнь канистры
+    .subtitle Не спешите выбрасывать канистру! Пустая канистра Вам может пригодиться!
+    p Поделка из канистры для дачи
+    .video
+      iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+    .idea
+      .idea__item
+        img(src="img/icon-1.jpg", alt="")
+      .idea__item
+        img(src="img/icon-2.jpg", alt="")
+      .idea__item
+        img(src="img/icon-3.jpg", alt="")
+      .idea__item.idea__item--special
+        span Есть свои идеи по использованию канистры?
+        .btn.btn--secondary Напишите нам
+    h2.h2 Где купить?
+    .row
+      .col.col--sm-8.col--sm-offset-2
+        .map-description Продукты в канистре «Кубанский молочник» Вы можете приобрести в следующих городах: Москва, Краснодар, Ростов-на-Дону, Сочи, Новороссийск, Анапа, Геленджик, Севастополь, Ялта , Симферополь и других.
+    .map
+      .map__slider
+        -for(var i = 1; i < 6; i++)
+          img(src="img/dealer-" + i + ".png", alt="")
+        img(src="img/dealer-1.png", alt="")
+  .feedback
+    h2.h2 Пишите нам!
+    .grid.grid--container
+      .row
+        .col.col--sm-8.col--sm-offset-2
+          form#feedback.form
+            .row
+              .col.col--md-6
+                .form-control
+                  input(type="text" pattern="/^$|\s+/")
+                  label Ваше имя
+                .form-control
+                  input(type="email" pattern="/^$|\s+/")
+                  label Электронная почта
+                .form-control
+                  input(type="tel" pattern="/^$|\s+/")
+                  label Ваш телефон
+              .col.col--md-6
+                .form-control
+                  textarea(pattern="/^$|\s+/")
+                  label Обращение
+            .btn-block
+              button.btn.btn--secondary Отправить
+
+
+
+
+
+
+
