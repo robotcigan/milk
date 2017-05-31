@@ -1,0 +1,44 @@
+@media(max-width 1110px)
+  .grid--container
+    max-width 98%
+  .parallax
+    display none
+  .hero
+    &__circle
+      circle(40rem)
+      flex-shrink 0
+    &__circle-container
+      display flex
+      justify-content center
+    &__img
+      transform translateX(2rem)
+      img
+        transform scale(.7)
+    &__dots
+      span
+        &:nth-child(2)
+          right 1rem
+        &:nth-child(3)
+          right 2rem
+        &:nth-child(5)
+          left 2rem
+        &:nth-child(6)
+          left 1rem
+  
+  .slider-nav
+    padding 0 4rem
+  .idea
+    padding 4rem 2rem
+
+@media(max-width 768px)
+  .main-header
+    display none
+  .mobile-menu-toggle
+    display block
+  .video
+    padding 0 4rem
+  .idea
+    padding 4rem 1rem
+  .hero
+    &__gost
+      display none

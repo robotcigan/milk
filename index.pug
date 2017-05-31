@@ -3,58 +3,247 @@ extends layout.pug
 block content
   .hero
     .grid.grid--container
+      .empty
       header.main-header
-        .main-header__top
-          .main-header__socials.socials
-            a(href="").social
-              i.fa.fa-instagram
-            a(href="").social
-              i.fa.fa-vk
-            a(href="").social
-              i.fa.fa-odnoklassniki
-            a(href="").social
-              i.fa.fa-facebook
-          .main-header__hash Делитесь своими идеями с хештегом 
-            span #проканистру
-          .btn.btn--solid Обратная связь
-        .main-header__nav.nav
-          a(href="").nav__link Почему канистра
-          a(href="").nav__link Вторая жизнь
-          .nav__link
-            .logo
-          a(href="").nav__link Где купить канистру
-          a(href="").nav__link Пишите нам
+        .grid.grid--container
+          .main-header__top
+            .main-header__socials.socials
+              a(href="").social
+                i.fa.fa-instagram
+              a(href="").social
+                i.fa.fa-vk
+              a(href="").social
+                i.fa.fa-odnoklassniki
+              a(href="").social
+                i.fa.fa-facebook
+            .main-header__hash Делитесь своими идеями с хештегом 
+              span #проканистру
+            .btn.btn--solid Обратная связь
+          .main-header__nav.nav
+            a(href="#why").nav__link Почему канистра
+            a(href="#second-life").nav__link Вторая жизнь
+            .nav__link.nav__link--logo
+              .logo
+            a(href="#where").nav__link Где купить канистру
+            a(href="#write").nav__link Пишите нам
+      
+      header.mobile-header
+        .logo
+        .mobile-nav.nav
+          a(href="#why").nav__link Почему канистра
+          a(href="#second-life").nav__link Вторая жизнь
+          a(href="#where").nav__link Где купить канистру
+          a(href="#write").nav__link Пишите нам
+        .mobile-menu-toggle
+          span
+          span
+          span
 
       h1.hero__title Инновационная упаковка
       .hero__slider
-        .row.row--sm-center
-          .col.col--sm-3
-            h3.h3.hero__subtitle Йогурт 2.5%
-            .hero__taste Земляника-клубника Вишня-клубника
-            ul.hero__gost
-              li выпускается согласно ГОСТ 31450-2013;
-              li не содержит сухое молоко и консерванты;
-              li поставляется с лучших ферм Краснодарского края.
+        .hero__slide.hero__slide--active
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle Йогурт 2.5%
+              .hero__taste Земляника-клубника Вишня-клубника
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
 
-          .col.col--sm-6
-            .hero__circle
-              .hero__img
-                img(src="img/img-1.png", alt="")
-          .col.col--sm-3
-            .hero__right-side.right-side
-              .right-side__header Масса НЕТТО
-              .right-side__row
-                span 720
-                | грамм
-              .right-side__row
-                span 53
-                | ккал
-              .right-side__row
-                span 2.5%
-                | жирность
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-1.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 720
+                  | грамм
+                .right-side__row
+                  span 53
+                  | ккал
+                .right-side__row
+                  span 2.5%
+                  | жирность
+
+        .hero__slide
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle КЕФИР 2,5%
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
+
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-2.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 720
+                  | грамм
+                .right-side__row
+                  span 53
+                  | ккал
+                .right-side__row
+                  span 2.5%
+                  | жирность
+
+        .hero__slide
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle Молоко 3,4%-6%
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
+
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-3.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 1400 / 720
+                  | грамм
+                .right-side__row
+                  span 61-84
+                  | ккал
+                .right-side__row
+                  span 3.4%-6%
+                  | жирность
+
+        .hero__slide
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle МОЛОКО 2,5%
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
+
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-4.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 1400 / 720
+                  | грамм
+                .right-side__row
+                  span 53
+                  | ккал
+                .right-side__row
+                  span 2.5%
+                  | жирность
+
+        .hero__slide
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle РЯЖЕНКА 2,5%
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
+
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-5.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 720
+                  | грамм
+                .right-side__row
+                  span 53
+                  | ккал
+                .right-side__row
+                  span 2.5%
+                  | жирность
+
+        .hero__slide
+          .row.row--sm-center
+            .col.col--sm-3
+              h3.h3.hero__subtitle СНЕЖОК 2,5%
+              ul.hero__gost
+                li выпускается согласно ГОСТ 31450-2013;
+                li не содержит сухое молоко и консерванты;
+                li поставляется с лучших ферм Краснодарского края.
+
+            .col.col--sm-6.hero__circle-container
+              .hero__circle
+                .hero__img
+                  img(src="img/img-6.png", alt="")
+                .hero__dots
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+            .col.col--sm-3
+              .hero__right-side.right-side
+                .right-side__header Масса НЕТТО
+                .right-side__row
+                  span 720
+                  | грамм
+                .right-side__row
+                  span 53
+                  | ккал
+                .right-side__row
+                  span 2.5%
+                  | жирность
+
+
 
   .grid.grid--container
-    h2.h2 Почему канистра?
+    h2.h2#why Почему канистра?
     .video
       iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
 
@@ -81,11 +270,41 @@ block content
       .col.col--sm-2
         img(src="img/info-4.jpg", alt="")
 
-    h2.h2 Вторая жизнь канистры
+    h2.h2#second-life Вторая жизнь канистры
     .subtitle Не спешите выбрасывать канистру! Пустая канистра Вам может пригодиться!
     p Поделка из канистры для дачи
-    .video
-      iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+    .slider-for
+      .video
+        iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+    .slider-nav
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
+      .slide
+        img(src="img/video-anons.jpg", alt="")
+        span Поделка из канистры для школьников
     .idea
       .idea__item
         img(src="img/icon-1.jpg", alt="")
@@ -96,7 +315,7 @@ block content
       .idea__item.idea__item--special
         span Есть свои идеи по использованию канистры?
         .btn.btn--secondary Напишите нам
-    h2.h2 Где купить?
+    h2.h2#where Где купить?
     .row
       .col.col--sm-8.col--sm-offset-2
         .map-description Продукты в канистре «Кубанский молочник» Вы можете приобрести в следующих городах: Москва, Краснодар, Ростов-на-Дону, Сочи, Новороссийск, Анапа, Геленджик, Севастополь, Ялта , Симферополь и других.
@@ -105,11 +324,11 @@ block content
         -for(var i = 1; i < 6; i++)
           img(src="img/dealer-" + i + ".png", alt="")
         img(src="img/dealer-1.png", alt="")
-  .feedback
+  .feedback#write
     h2.h2 Пишите нам!
     .grid.grid--container
       .row
-        .col.col--sm-8.col--sm-offset-2
+        .col.col--lg-8.col--lg-offset-2
           form#feedback.form
             .row
               .col.col--md-6
@@ -128,6 +347,8 @@ block content
                   label Обращение
             .btn-block
               button.btn.btn--secondary Отправить
+
+
 
 
 

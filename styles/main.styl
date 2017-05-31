@@ -5,6 +5,10 @@
 @import 'base/base.styl'
 @import 'base/form.styl'
 @import 'base/typography.styl'
+@import 'base/animations.styl'
+@import 'base/parallax.styl'
+
+@import 'modifications/modifications.styl'
 
 .grid--container
   max-width 1146px
@@ -29,7 +33,19 @@
     bottom 0
     left 0
     position absolute
-    size(10.5rem, 100%)
+    size(10rem, 100%)
+  &--first
+    background-color $hero-purple
+  &--second
+    background-color #196a30
+  &--third
+    background-color #9a0b1e
+  &--4th
+    background-color #0039a6
+  &--5th
+    background-color #e00a03
+  &--6th
+    background-color #0082c1
   &__title
     font-size 6.8rem
     font-family $font-header
@@ -47,7 +63,42 @@
     circle(55.8rem)
     display flex
     justify-content center
-    // margin-bottom 20rem
+    position relative
+  &__dots
+    span
+      background-color #fff
+      border-radius 50%
+      circle(2rem)
+      cursor pointer
+      margin auto
+      position absolute
+      z-index 20
+      &.active
+        background-color $secondary
+      &:hover
+        border 4px solid $secondary
+        border-radius 50%
+      &:nth-child(1)
+        left 0
+        right 0
+        top -1rem
+      &:nth-child(2)
+        right 2rem
+        top 25%
+      &:nth-child(3)
+        right 3.2rem
+        top 75%
+      &:nth-child(4)
+        bottom -1rem
+        left 0
+        right 0
+      &:nth-child(5)
+        left 3.2rem
+        top 75%
+      &:nth-child(6)
+        left 2rem
+        top 25%
+
   &__img
     position relative
     transform translateX(3rem)
@@ -65,7 +116,7 @@
       top 0
       z-index -1
     img
-      display block
+      display none
       max-width 100%
   
   &__subtitle
@@ -108,11 +159,31 @@
           margin-right 1rem
         &:not(:last-child)
           border-bottom $border
+  
+  &__slide
+    display none
+    &--active
+      display block
+      .hero
+        &__img
+          img
+            display block
+
+.empty
+  height 20rem
+
 
 .main-header
   color #fff
+  left 0
+  height 13rem
   margin-bottom 8rem
   padding-top 3rem
+  position fixed
+  top 0
+  transition all .2s ease
+  width 100%
+  z-index 50
   &__top
     position relative
     .btn
@@ -121,7 +192,9 @@
       top 0
   .logo
     flex-shrink 0
+    max-width 17.5rem
     transform translateY(2rem)
+    transition max-width .2s
   &__nav.nav
     align-items flex-end
     display flex
@@ -135,12 +208,74 @@
         position relative
         text-decoration none
         text-transform uppercase
+        transition all .2s ease
+        &:not(.nav__link--logo):hover
+          opacity .5
   &__hash
     color rgba(#fff, .4)
     font-size 1.4rem
     margin-top 1rem
     span
       color #fff
+  
+  &--scroll
+    background-color #fff
+    box-shadow 2px 0 0 rgba(#000, .2)
+    height 7rem
+    .main-header
+      &__top
+        display none
+      &__nav.nav
+        margin-top -13rem
+        .nav
+          &__link
+            color $primary
+        .logo
+          max-width 10rem
+          transform translateY(10.5rem)
+
+
+.mobile-header
+  display none
+  padding-top 2rem
+  .logo
+    max-width 10rem
+
+
+.mobile-menu-toggle
+  cursor pointer
+  display none
+  position relative
+  size(12px, 15px)
+  &:before
+    content ''
+    left -.8rem
+    position absolute
+    top -.9rem
+    circle(3rem)
+  span
+    background-color #fff
+    display block
+    height 2px
+    position absolute
+    top 0
+    transition transform .3s
+    width 25px
+    &:nth-child(2)
+      top 7px
+    &:nth-child(3)
+      top 14px
+  &--active
+    span
+      &:nth-child(1)
+        transform rotate(45deg)
+        top 5px
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(-45deg)
+        top 5px
+
 
 .socials
   .social
@@ -209,6 +344,18 @@
     size(48rem, 100%)
 
 
+.slider-nav
+  margin-top -8rem
+  margin-bottom 12rem
+  padding 0 14.5rem
+  img
+    max-width 100%
+  span
+    display block
+    font-size 1.4rem
+    line-height 1.4
+    margin-top .8rem
+
 .info
   margin-bottom 23rem
   &__header
@@ -248,9 +395,12 @@
   background url('../../img/map.png') no-repeat center
   background-size contain
   height 40rem
-  margin-bottom 12rem
+  margin-bottom 14rem
+  margin-top 2rem
   &__slider
+    padding 0 6.5rem
     transform translateY(16rem)
+
 
 .feedback
   background-color $primary
@@ -278,7 +428,32 @@
 .main-footer
   margin-top 16rem
   padding-bottom 6rem
+  .col--sm
+    padding 0
+  &__text
+    font-size 1.4rem
+  &__img
+    text-align center
+    img
+      max-width 10rem
+
+.wf
+  float right
+  font-size 1.4rem
+  line-height 1
+  &__img
+    display inline-block
+    max-width 5rem
+    margin-right .5rem
+    vertical-align middle
+  a
+    border-bottom 1px solid rgba($primary, .3)
+    color $primary
+    margin-left .4rem
+    text-decoration none
 
 
+
+@import 'base/media.styl'
 
 

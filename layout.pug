@@ -13,13 +13,34 @@ html(lang="ru")
     main
       block content
 
+    .parallax
+      img(src="img/parallax-1.png", alt="")
+      img(src="img/parallax-2.png", alt="")
+      img(src="img/parallax-3.png", alt="")
+      img(src="img/parallax-4.png", alt="")
+
     footer.main-footer
       .grid.grid--container
-        .row
+        .row.row--sm-center
           .col.col--sm-5
-            p © 1995—2016 ОАО «Трест «Южный сахар» - производство и реализация натуральных молочных продуктов
+            p.main-footer__text © 1995—2016 ОАО «Трест «Южный сахар» - производство и реализация натуральных молочных продуктов
+          .col.col--sm-4
+            .row.row--sm-center.main-footer__img
+              .col.col--sm
+                img(src="img/kuban.png", alt="")
+              .col.col--sm
+                img(src="img/staromin.png", alt="")
+              .col.col--sm
+                img(src="img/profi.png", alt="")
+          .col.col--sm-3
+            .wf
+              img(src="img/wf.png", alt="").wf__img
+              | Разработка сайта
+              a(href="") WF
 
 
     script(src="js/jquery.min.js")
     script(src="js/slick.min.js")
+    script(src="js/jquery.easeScroll.js")
+    script(src="js/jquery.mousewheel.js")
     script(src="js/main.js")
