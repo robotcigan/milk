@@ -21,9 +21,9 @@
           </div>
           <div class="col col--sm-4">
             <div class="row row--sm-center main-footer__img">
-              <div class="col col--sm"><img src="img/kuban.png" alt=""></div>
-              <div class="col col--sm"><img src="img/staromin.png" alt=""></div>
-              <div class="col col--sm"><img src="img/profi.png" alt=""></div>
+              <div class="col col--xs"><img src="img/kuban.png" alt=""></div>
+              <div class="col col--xs"><img src="img/staromin.png" alt=""></div>
+              <div class="col col--xs"><img src="img/profi.png" alt=""></div>
             </div>
           </div>
           <div class="col col--sm-3">
@@ -31,9 +31,42 @@
           </div>
         </div>
       </div>
+      <div class="modal" id="callback">
+        <div class="modal__title">Обратная связь</div>
+        <form class="form">
+          <div class="row">
+            <div class="col col--md-6">
+              <div class="form-control">
+                <input type="text" pattern="/^$|s+/">
+                <label>Ваше имя</label>
+              </div>
+              <div class="form-control">
+                <input type="email" pattern="/^$|s+/">
+                <label>Электронная почта</label>
+              </div>
+              <div class="form-control">
+                <input type="tel" pattern="/^$|s+/">
+                <label>Ваш телефон</label>
+              </div>
+            </div>
+            <div class="col col--md-6">
+              <div class="form-control">
+                <textarea pattern="/^$|s+/"></textarea>
+                <label>Обращение</label>
+              </div>
+            </div>
+            <div class="col col--sm-12">
+              <div class="btn-block">
+                <button class="btn btn--secondary">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.easeScroll.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/main.js"></script>

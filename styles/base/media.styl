@@ -1,4 +1,132 @@
+// body
+//   debug()
+// html.mobile-menu-was-open
+//   overflow hidden
+
+.hero
+  overflow hidden
+
+.mobile-header
+  display none
+  left 0
+  // height 100%
+  margin-bottom 0
+  padding 0 2%
+  padding-top 2rem
+  position absolute
+  top 0
+  transition transform .4s ease
+  width 100%
+  .logo
+    height 9rem
+    max-width 9rem
+  &--active
+    .mobile-menu-toggle
+      transform translateX(-32rem)
+
+    
+
+.mobile-menu
+  background-color rgba(#fff, .97)
+  height 110vh
+  padding-left 4rem
+  position absolute
+  top 0
+  right 0
+  transform translateX(100%)
+  transition transform .4s ease
+  width 32rem
+  z-index 50
+  &__bottom
+    // bottom 10rem
+    // position absolute
+  .socials
+    margin-top 8rem
+    .social
+      margin-right 2rem
+      .fa
+        border-color $main
+        circle(4rem)
+        color $main
+        font-size 1.8rem
+      .fa-instagram
+        border-color $insta
+        color $insta
+      .fa-vk
+        border-color $vk
+        color $vk
+      .fa-odnoklassniki
+        border-color $ok
+        color $ok
+      .fa-facebook
+        border-color $facebook
+        color $facebook
+  .btn.btn--solid
+    border-color $primary
+    color $primary
+    margin-top 2rem
+    text-align center
+    padding 1.5rem 5rem
+  &--active
+    display block
+    transform none
+
+
+.mobile-nav.nav
+  margin-top 10rem
+  .nav
+    &__link
+      color $primary
+      display block
+      font-size 3.2rem
+      font-family $font-header
+      line-height 1
+      margin-bottom 4rem
+      text-decoration none
+      text-transform uppercase
+
+.mobile-menu-toggle
+  cursor pointer
+  display none
+  position absolute
+  right 4rem
+  top 4rem
+  size(12px, 15px)
+  transition transform .4s ease
+  &:before
+    // background-color rgba(#fff, .97)
+    content ''
+    left -2.4rem
+    position absolute
+    top -3rem
+    circle(8rem)
+  span
+    // background-color $primary
+    background-color #fff
+    display block
+    height 2px
+    position absolute
+    top 0
+    transition transform .3s
+    width 3rem
+    &:nth-child(2)
+      top 8px
+    &:nth-child(3)
+      top 16px
+  &--active
+    span
+      &:nth-child(1)
+        transform rotate(45deg)
+        top 5px
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(-45deg)
+        top 5px
+
 @media(max-width 1110px)
+  body
+    overflow-X hidden
   .grid--container
     max-width 98%
   .parallax
@@ -33,6 +161,10 @@
 @media(max-width 768px)
   .main-header
     display none
+  .mobile-header
+    display block
+  // .mobile-nav.nav
+  //   display none
   .mobile-menu-toggle
     display block
   .video
@@ -42,3 +174,107 @@
   .hero
     &__gost
       display none
+  .info
+    img
+      margin-bottom 4rem
+
+@media(max-width 767px)
+  .empty
+    height 12rem
+  .hero
+    &__title
+      font-size 4.8rem
+    &__circle
+      circle(30rem)
+  .video
+    padding 0
+    iframe
+      height 35rem
+  #feedback
+    .btn
+      display block
+      width 100%
+  .slider-nav
+    padding 0
+  .info
+    &:nth-of-type(3)
+      .col.col--sm-8:nth-of-type(1)
+        order 1
+    &__text
+      margin-bottom 2rem
+  .idea
+    display flex
+    flex-direction column
+    flex-wrap wrap
+    justify-content center
+    &__item
+      margin-bottom 4rem
+      width 14.5rem
+      &:nth-child(4)
+        width 100%
+  .main-footer
+    &__img
+      margin-bottom 2rem
+      margin-top 2rem
+      img
+        max-width 8rem
+    .wf
+      margin-top 2rem
+      float left
+
+@media(max-width 500px)
+  .row
+    margin 0 -.5rem
+  .mobile-header
+     &--active
+       transform translateX(-32rem)
+      .mobile-menu-toggle
+        transform none
+  .hero
+    &__circle
+      margin-bottom 6rem
+    &__dots
+      span
+        &:nth-child(2)
+          right .5rem
+        &:nth-child(3)
+          right 1.5rem
+        &:nth-child(5)
+          left 1.5rem
+        &:nth-child(6)
+          left .5rem
+    &__img
+      transform translateX(1rem)
+    &__subtitle
+      margin-bottom 4rem
+      text-align center
+    &__taste
+      margin-bottom 4rem
+      margin-top -3rem
+      text-align center
+    &__right-side.right-side
+      padding-left 0
+  
+  .info
+    text-align center
+  
+  .slider-nav
+    .slick-prev
+      left 0
+    .slick-next
+      right 0
+
+@media(max-width 400px)
+  .mobile-header
+     &--active
+       transform translateX(-25.5rem)
+  .mobile-menu
+    padding-left 1.5rem
+    width 26.5rem
+  .video
+    iframe
+      height 20rem
+
+@media(max-height 450px)
+  .mobile-menu
+    height 100%

@@ -18,7 +18,7 @@ block content
                 i.fa.fa-facebook
             .main-header__hash Делитесь своими идеями с хештегом 
               span #проканистру
-            .btn.btn--solid Обратная связь
+            a(href="#callback").btn.btn--solid.open-modal Обратная связь
           .main-header__nav.nav
             a(href="#why").nav__link Почему канистра
             a(href="#second-life").nav__link Вторая жизнь
@@ -29,47 +29,59 @@ block content
       
       header.mobile-header
         .logo
+        .mobile-menu-toggle
+          span
+          span
+          span
+      .mobile-menu
         .mobile-nav.nav
           a(href="#why").nav__link Почему канистра
           a(href="#second-life").nav__link Вторая жизнь
           a(href="#where").nav__link Где купить канистру
           a(href="#write").nav__link Пишите нам
-        .mobile-menu-toggle
-          span
-          span
-          span
+        .mobile-menu__bottom
+          .socials
+            a(href="").social
+              i.fa.fa-instagram
+            a(href="").social
+              i.fa.fa-vk
+            a(href="").social
+              i.fa.fa-odnoklassniki
+            a(href="").social
+              i.fa.fa-facebook
+          a(href="#callback").btn.btn--solid.open-modal Обратная связь
 
       h1.hero__title Инновационная упаковка
       .hero__slider
         .hero__slide.hero__slide--active
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle Йогурт 2.5%
+              h3.h3.hero__subtitle Йогурт
               .hero__taste Земляника-клубника Вишня-клубника
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li производятся на основе полезной йогуртовой закваски 
+                li содержит только натуральные фруктово-ягодные наполнители
+                li имеют низкую калорийность 
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-1.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 720
-                  | грамм
+                  | гр
                 .right-side__row
-                  span 53
+                  span 79
                   | ккал
                 .right-side__row
                   span 2.5%
@@ -78,31 +90,31 @@ block content
         .hero__slide
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle КЕФИР 2,5%
+              h3.h3.hero__subtitle Кефир 2,5%
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li традиционная технология изготовления
+                li изготавливается из молока и живой закваски 
+                li улучшает обмен веществ
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-2.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 720
-                  | грамм
+                  | гр
                 .right-side__row
-                  span 53
+                  span 50
                   | ккал
                 .right-side__row
                   span 2.5%
@@ -111,62 +123,64 @@ block content
         .hero__slide
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle Молоко 3,4%-6%
+              h3.h3.hero__subtitle Молоко Отборное
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li соответствует требованиям ГОСТ
+                li не содержит сухое молоко и консерванты
+                li выпускается только из свежего и натурального коровьего молока
+                li имеет срок годности 10 суток
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-3.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 1400 / 720
-                  | грамм
+                  | гр
                 .right-side__row
-                  span 61-84
+                  span 79
                   | ккал
                 .right-side__row
-                  span 3.4%-6%
+                  span 2.5%
                   | жирность
 
         .hero__slide
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle МОЛОКО 2,5%
+              h3.h3.hero__subtitle Молоко
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li соответствует требованиям ГОСТ
+                li не содержит сухое молоко и консерванты
+                li выпускается только из свежего и натурального коровьего молока
+                li имеет срок годности 10 суток
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-4.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 1400 / 720
-                  | грамм
+                  | гр
                 .right-side__row
                   span 53
                   | ккал
@@ -177,64 +191,65 @@ block content
         .hero__slide
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle РЯЖЕНКА 2,5%
+              h3.h3.hero__subtitle Ряженка
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li является полезным молочным продуктом
+                li обладает нежным сливочным вкусом 
+                li не содержит консервантов и других искусственных добавок
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-5.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 720
-                  | грамм
+                  | гр
                 .right-side__row
-                  span 53
+                  span 57-82
                   | ккал
                 .right-side__row
-                  span 2.5%
+                  span 2,5-6%
                   | жирность
 
         .hero__slide
           .row.row--sm-center
             .col.col--sm-3
-              h3.h3.hero__subtitle СНЕЖОК 2,5%
+              h3.h3.hero__subtitle Снежок 2,5%
               ul.hero__gost
-                li выпускается согласно ГОСТ 31450-2013;
-                li не содержит сухое молоко и консерванты;
-                li поставляется с лучших ферм Краснодарского края.
+                li оригинальный нежный вкус 
+                li имеет приятную однородную консистенцию
+                li изготавливается из натурального молока
+                li нормализует деятельность желудочно-кишечного тракта
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
                 .hero__img
                   img(src="img/img-6.png", alt="")
                 .hero__dots
-                  span
-                  span
-                  span
-                  span
-                  span
-                  span
+                  span(data-name="Йогурт")
+                  span(data-name="Кефир")
+                  span(data-name="Молоко Отборное")
+                  span(data-name="Молоко")
+                  span(data-name="Ряженка")
+                  span(data-name="Снежок")
             .col.col--sm-3
               .hero__right-side.right-side
                 .right-side__header Масса НЕТТО
                 .right-side__row
                   span 720
-                  | грамм
+                  | гр
                 .right-side__row
-                  span 53
+                  span 75
                   | ккал
                 .right-side__row
                   span 2.5%
@@ -245,47 +260,47 @@ block content
   .grid.grid--container
     h2.h2#why Почему канистра?
     .video
-      iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
+      iframe(src="https://www.youtube.com/embed/lwzhnfOQcN0?ecver=1" frameborder="0" allowfullscreen)
 
     .info.info--offset.row.row--sm-center
-      .col.col--sm-2
+      .col.col--sm-4.col--lg-2
         img(src="img/info-1.jpg", alt="")
-      .col.col--sm-4
+      .col.col--sm-8.col--lg-4.info__text
         .info__header Компактность размеров
         p.info__desc Канистра имеет компактные размеры и легко поместится в холодильнике, не занимая много места
-      .col.col--sm-2
+      .col.col--sm-4.col--lg-2
         img(src="img/info-2.jpg", alt="")
-      .col.col--sm-4
+      .col.col--sm-8.col--lg-4.info__text
         .info__header Удобство Формы
         p.info__desc Продукты удобно наливать через широкое горлышко, а благодаря удобной ручке канистру удобно нести в руках.
     .info.row.row--sm-center
-      .col.col--sm-4
+      .col.col--sm-8.col--lg-4.info__text
         .info__header Экологичность
         p.info__desc Канистра выполнена из безопасного и качественного материала, который прекрасно сохраняет свежесть и вкус продукта.
-      .col.col--sm-2
+      .col.col--sm-4.col--lg-2
         img(src="img/info-3.jpg", alt="")
-      .col.col--sm-4
+      .col.col--sm-8.col--lg-4.info__text
         .info__header Инновационный формат веса
         p.info__desc Полезных и вкусных продуктов теперь хватит на всю семью.
-      .col.col--sm-2
+      .col.col--sm-4.col--lg-2
         img(src="img/info-4.jpg", alt="")
 
     h2.h2#second-life Вторая жизнь канистры
     .subtitle Не спешите выбрасывать канистру! Пустая канистра Вам может пригодиться!
-    p Поделка из канистры для дачи
+    //- p Поделка из канистры для дачи
     .slider-for
+      .video
+        iframe(src="https://www.youtube.com/embed/ef4lf4_xBVw?ecver=1" frameborder="0" allowfullscreen)
+      .video
+        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
       .video
         iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
       .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+        iframe(src="https://www.youtube.com/embed/nPqxW9-lQHY?ecver=1" frameborder="0" allowfullscreen)
       .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+        iframe(src="https://www.youtube.com/embed/lwzhnfOQcN0?ecver=1" frameborder="0" allowfullscreen)
       .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+        iframe(src="https://www.youtube.com/embed/EWv9CLySXzs?ecver=1" frameborder="0" allowfullscreen)
     .slider-nav
       .slide
         img(src="img/video-anons.jpg", alt="")
@@ -317,7 +332,7 @@ block content
         .btn.btn--secondary Напишите нам
     h2.h2#where Где купить?
     .row
-      .col.col--sm-8.col--sm-offset-2
+      .col.col--md-8.col--md-offset-2
         .map-description Продукты в канистре «Кубанский молочник» Вы можете приобрести в следующих городах: Москва, Краснодар, Ростов-на-Дону, Сочи, Новороссийск, Анапа, Геленджик, Севастополь, Ялта , Симферополь и других.
     .map
       .map__slider
@@ -347,6 +362,7 @@ block content
                   label Обращение
             .btn-block
               button.btn.btn--secondary Отправить
+
 
 
 

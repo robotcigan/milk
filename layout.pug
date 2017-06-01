@@ -26,21 +26,43 @@ html(lang="ru")
             p.main-footer__text © 1995—2016 ОАО «Трест «Южный сахар» - производство и реализация натуральных молочных продуктов
           .col.col--sm-4
             .row.row--sm-center.main-footer__img
-              .col.col--sm
+              .col.col--xs
                 img(src="img/kuban.png", alt="")
-              .col.col--sm
+              .col.col--xs
                 img(src="img/staromin.png", alt="")
-              .col.col--sm
+              .col.col--xs
                 img(src="img/profi.png", alt="")
           .col.col--sm-3
             .wf
               img(src="img/wf.png", alt="").wf__img
               | Разработка сайта
               a(href="") WF
-
+    
+      #callback.modal
+        .modal__title Обратная связь
+        form.form
+          .row
+            .col.col--md-6
+              .form-control
+                input(type="text" pattern="/^$|\s+/")
+                label Ваше имя
+              .form-control
+                input(type="email" pattern="/^$|\s+/")
+                label Электронная почта
+              .form-control
+                input(type="tel" pattern="/^$|\s+/")
+                label Ваш телефон
+            .col.col--md-6
+              .form-control
+                textarea(pattern="/^$|\s+/")
+                label Обращение
+            .col.col--sm-12
+              .btn-block
+                button.btn.btn--secondary Отправить
 
     script(src="js/jquery.min.js")
     script(src="js/slick.min.js")
+    script(src="js/jquery.magnific-popup.min.js")
     script(src="js/jquery.easeScroll.js")
     script(src="js/jquery.mousewheel.js")
     script(src="js/main.js")

@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+  // Переход по якорям
   $(".main-header a").on("click", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
@@ -14,6 +15,7 @@ $(document).ready(function () {
     $('body,html').animate({ scrollTop: top - 130 }, 800);
   });
 
+  // Шапка
   $(window).scroll(function () {
     if ($(window).scrollTop() > 20) {
       $('.main-header').addClass('main-header--scroll');
@@ -22,19 +24,22 @@ $(document).ready(function () {
     }
   });
 
+  // Плавный скролл
   $("html").easeScroll();
+
+  // Параллакс
   var scroll = 0;
 
   $('body').mousewheel(function (event) {
     scroll = scroll + event.deltaY;
-    if (scroll >= 0) scroll = 0;
-    if (scroll <= -60) scroll = -60;
-    console.log(scroll);
+    if (scroll >= 30) scroll = 30;
+    if (scroll <= -30) scroll = -30;
     $('.parallax img').css({
-      "transform": "translateY(" + -scroll * 2 + "px)"
+      "transform": "translateY(" + scroll * 4 + "px)"
     });
   });
 
+  // Переключатели кругового слайдера
   $('.hero__dots span').eq(0).addClass('active');
 
   $('.hero__dots span').on('click', function () {
@@ -73,11 +78,13 @@ $(document).ready(function () {
     $('.hero__slider .hero__slide').eq(index).addClass('hero__slide--active');
   });
 
+  // Слайдеры
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    dots: false,
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
@@ -92,9 +99,7 @@ $(document).ready(function () {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        slidesToScroll: 1
       }
     }, {
       breakpoint: 600,
@@ -124,8 +129,7 @@ $(document).ready(function () {
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true
+        infinite: true
       }
     }, {
       breakpoint: 600,
@@ -140,5 +144,17 @@ $(document).ready(function () {
         slidesToScroll: 1
       }
     }]
+  });
+
+  // Мобильное меню
+  $('.mobile-menu-toggle').on('click', function () {
+    $('.mobile-header').toggleClass('mobile-header--active');
+    $(this).toggleClass('mobile-menu-toggle--active');
+    $('.mobile-menu').toggleClass('mobile-menu--active');
+  });
+
+  // Модалка
+  $('.open-modal').magnificPopup({
+    type: 'inline'
   });
 });

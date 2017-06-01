@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic')
+
 @import 'helpers/variables.styl'
 @import 'helpers/mixins.styl'
 @import 'helpers/helpers.styl'
@@ -7,6 +9,7 @@
 @import 'base/typography.styl'
 @import 'base/animations.styl'
 @import 'base/parallax.styl'
+@import 'base/modal.styl'
 
 @import 'modifications/modifications.styl'
 
@@ -15,6 +18,9 @@
 
 .row
   margin: 0 -1.5rem 1rem -1.5rem;
+
+.col
+  padding 0 1.5rem
 
 .logo
   background url('../../img/logo.png') no-repeat
@@ -70,14 +76,27 @@
       border-radius 50%
       circle(2rem)
       cursor pointer
+      display inline-block
       margin auto
       position absolute
       z-index 20
+      &:before
+        // background-color teal
+        content attr(data-name)
+        font-size 2rem
+        // left -7.5rem
+        line-height 5
+        margin auto
+        opacity 0
+        position absolute
+        right 0
+        text-align center
+        // top -1rem
+        transform translate(8.5rem, 1rem)
+        transition all .2s
+        width 17rem
       &.active
         background-color $secondary
-      &:hover
-        border 4px solid $secondary
-        border-radius 50%
       &:nth-child(1)
         left 0
         right 0
@@ -98,6 +117,12 @@
       &:nth-child(6)
         left 2rem
         top 25%
+      &:hover
+        border 4px solid $secondary
+        border-radius 50%
+        &:before
+          opacity 1
+          transform translate(8.5rem, -1rem)
 
   &__img
     position relative
@@ -235,46 +260,7 @@
           transform translateY(10.5rem)
 
 
-.mobile-header
-  display none
-  padding-top 2rem
-  .logo
-    max-width 10rem
 
-
-.mobile-menu-toggle
-  cursor pointer
-  display none
-  position relative
-  size(12px, 15px)
-  &:before
-    content ''
-    left -.8rem
-    position absolute
-    top -.9rem
-    circle(3rem)
-  span
-    background-color #fff
-    display block
-    height 2px
-    position absolute
-    top 0
-    transition transform .3s
-    width 25px
-    &:nth-child(2)
-      top 7px
-    &:nth-child(3)
-      top 14px
-  &--active
-    span
-      &:nth-child(1)
-        transform rotate(45deg)
-        top 5px
-      &:nth-child(2)
-        opacity 0
-      &:nth-child(3)
-        transform rotate(-45deg)
-        top 5px
 
 
 .socials
@@ -299,12 +285,14 @@
         border-color #fff
 
 .btn
+  color #fff
   cursor pointer
   border 0
   border-radius $radius
   display inline-block
   line-height 1
   padding 1.5rem 2rem
+  text-decoration none
   transition background-color .2s
   &--secondary
     background-color $secondary
@@ -358,6 +346,7 @@
 
 .info
   margin-bottom 23rem
+  overflow hidden
   &__header
     color $primary
     font-size 1.8rem
@@ -367,6 +356,8 @@
     text-transform uppercase
   &--offset
     margin-bottom 4.5rem
+  img
+    max-width 100%
 
 
 .idea
@@ -435,7 +426,7 @@
   &__img
     text-align center
     img
-      max-width 10rem
+      max-width 9rem
 
 .wf
   float right
