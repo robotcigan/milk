@@ -718,18 +718,22 @@ p {
   width: 100%;
 }
 .slider-nav {
+  margin: 0 -1rem;
   margin-top: -8rem;
   margin-bottom: 12rem;
   padding: 0 14.5rem;
 }
 .slider-nav img {
-  max-width: 100%;
+  width: 100%;
 }
 .slider-nav span {
   display: block;
   font-size: 1.4rem;
   line-height: 1.4;
   margin-top: 0.8rem;
+}
+.slider-nav .slide {
+  padding: 1rem;
 }
 .info {
   margin-bottom: 23rem;
@@ -827,7 +831,7 @@ p {
   text-align: center;
 }
 .main-footer__img img {
-  max-width: 9rem;
+  max-width: 8rem;
 }
 .wf {
   float: right;
@@ -1146,6 +1150,15 @@ p {
   }
   .slider-nav .slick-next {
     right: 0;
+  }
+  .main-footer__text {
+    margin-bottom: 2rem;
+  }
+  .main-footer__img {
+    text-align: left;
+  }
+  .main-footer__img img {
+    max-width: 6rem;
   }
 }
 @media (max-width: 400px) {

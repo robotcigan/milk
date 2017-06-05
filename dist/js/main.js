@@ -15,14 +15,20 @@ $(document).ready(function () {
     $('body,html').animate({ scrollTop: top - 130 }, 800);
   });
 
-  // Шапка
-  $(window).scroll(function () {
+  function mainHeaderScroll() {
     if ($(window).scrollTop() > 20) {
       $('.main-header').addClass('main-header--scroll');
     } else {
       $('.main-header').removeClass('main-header--scroll');
     }
+  }
+
+  // Шапка
+  $(window).scroll(function () {
+    mainHeaderScroll();
   });
+
+  mainHeaderScroll();
 
   // Плавный скролл
   $("html").easeScroll();
@@ -73,7 +79,7 @@ $(document).ready(function () {
         break;
     }
     $('.hero__dots span').removeClass('active');
-    $(this).addClass('active');
+    $('.hero__slider .hero__slide').eq(index).find('.hero__dots span').eq(index).addClass('active');
     $('.hero__slider .hero__slide').removeClass('hero__slide--active');
     $('.hero__slider .hero__slide').eq(index).addClass('hero__slide--active');
   });
@@ -89,7 +95,7 @@ $(document).ready(function () {
   });
   $('.slider-nav').slick({
     arrows: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: false,
