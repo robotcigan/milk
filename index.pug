@@ -65,6 +65,9 @@ block content
 
             .col.col--sm-6.hero__circle-container
               .hero__circle
+                .circle-svg
+                  svg#svg(version="1.1" xmlns="http://www.w3.org/2000/svg")
+                    circle#bar(fill="transparent" stroke-dashoffset="0")
                 .hero__img
                   img(src="img/img-1.png", alt="")
                 .hero__dots
@@ -252,130 +255,128 @@ block content
                   span 2.5%
                   | жирность
 
+  //- .grid.grid--container
+  //-   h2.h2#why Почему канистра?
+  //-   .video
+  //-     iframe(src="https://www.youtube.com/embed/lwzhnfOQcN0?ecver=1" frameborder="0" allowfullscreen)
 
+  //-   .info.info--offset.row.row--sm-center
+  //-     .col.col--sm-4.col--lg-2
+  //-       img(src="img/info-1.jpg", alt="")
+  //-     .col.col--sm-8.col--lg-4.info__text
+  //-       .info__header Компактность размеров
+  //-       p.info__desc Канистра имеет компактные размеры и легко поместится в холодильнике, не занимая много места
+  //-     .col.col--sm-4.col--lg-2
+  //-       img(src="img/info-2.jpg", alt="")
+  //-     .col.col--sm-8.col--lg-4.info__text
+  //-       .info__header Удобство Формы
+  //-       p.info__desc Продукты легко наливать через широкое горлышко, а благодаря удобной ручке канистру удобно нести в руках.
+  //-   .info.row.row--sm-center
+  //-     .col.col--sm-8.col--lg-4.info__text
+  //-       .info__header Экологичность
+  //-       p.info__desc Канистра выполнена из безопасного и качественного материала, который прекрасно сохраняет свежесть и вкус продукта.
+  //-     .col.col--sm-4.col--lg-2
+  //-       img(src="img/info-3.jpg", alt="")
+  //-     .col.col--sm-8.col--lg-4.info__text
+  //-       .info__header Инновационный формат веса
+  //-       p.info__desc Полезных и вкусных продуктов теперь хватит на всю семью.
+  //-     .col.col--sm-4.col--lg-2
+  //-       img(src="img/info-4.jpg", alt="")
 
-  .grid.grid--container
-    h2.h2#why Почему канистра?
-    .video
-      iframe(src="https://www.youtube.com/embed/lwzhnfOQcN0?ecver=1" frameborder="0" allowfullscreen)
+  //-   h2.h2#second-life Вторая жизнь канистры
+  //-   .subtitle Не спешите выбрасывать канистру! Пустая канистра Вам может пригодиться!
+  //-   //- p Поделка из канистры для дачи
+  //-   .slider-for
+  //-     .video
+  //-       iframe(src="https://www.youtube.com/embed/nTxepN_M5JY?ecver=1" frameborder="0" allowfullscreen)
+  //-     .video
+  //-       iframe(src="https://www.youtube.com/embed/UQ0wTFolXCM?ecver=1" frameborder="0" allowfullscreen)
+  //-     .video
+  //-       iframe(src="https://www.youtube.com/embed/PGEhRDk44ho?ecver=1" frameborder="0" allowfullscreen)
+  //-     .video
+  //-       iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
+  //-     .video
+  //-       iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
+  //-   .slider-nav
+  //-     .slide
+  //-       img(src="img/для животных.jpg", alt="")
+  //-       span Лайфхак для животных: кормушка для птиц
+  //-     .slide
+  //-       img(src="img/для сада.jpg", alt="")
+  //-       span Лайфхак для сада и огорода: садовые инструменты
+  //-     .slide
+  //-       img(src="img/для мелочи.jpg", alt="")
+  //-       span Лайфхак для дома и гаража: коробка под бытовые мелочи
+  //-     .slide
+  //-       img(src="img/для дома.jpg", alt="")
+  //-       span Лайфхак для дома: лейка для полива цветов и держатель для кисточки
+  //-     .slide
+  //-       img(src="img/для дачи.jpg", alt="")
+  //-       span Лайфхак для дачи: горшок для рассады и цветов
+  //-   .idea
+  //-     .idea__item
+  //-       img(src="img/icon-1.jpg", alt="")
+  //-     .idea__item
+  //-       img(src="img/icon-2.jpg", alt="")
+  //-     .idea__item
+  //-       img(src="img/icon-3.jpg", alt="")
+  //-     .idea__item.idea__item--special
+  //-       span Есть свои идеи по использованию канистры?
+  //-       .btn.btn--secondary Напишите нам
+  //-   h2.h2#where Где купить?
+  //-   .row
+  //-     .col.col--md-8.col--md-offset-2
+  //-       .map-description Продукты в канистре «Кубанский молочник» Вы можете приобрести в следующих городах: Москва, Краснодар, Ростов-на-Дону, Сочи, Новороссийск, Анапа, Геленджик, Севастополь, Ялта , Симферополь и других.
+  //-   .map
+  //-     .map__slider
+  //-       a(href="https://5ka.ru/" target="_blank")
+  //-         img(src="img/dealer-1.png", alt="")
+  //-       a(href="http://www.okmarket.ru/" target="_blank")
+  //-         img(src="img/dealer-2.png", alt="")
+  //-       a(href="http://magnit-info.ru/" target="_blank")
+  //-         img(src="img/dealer-3.png", alt="")
+  //-       a(href="https://www.perekrestok.ru/" target="_blank")
+  //-         img(src="img/dealer-4.png", alt="")
+  //-       a(href="https://www.tabris.ru/" target="_blank")
+  //-         img(src="img/dealer-5.png", alt="")
+  //-       a(href="https://www.auchan.ru/" target="_blank")
+  //-         img(src="img/dealer-6.png", alt="")
+  //-       a(href="http://www.victoria-group.ru/" target="_blank")
+  //-         img(src="img/dealer-7.png", alt="")
+  //-       a(href="" target="_blank")
+  //-         img(src="img/dealer-8.png", alt="")
+  //-       a(href="http://www.lenta.com/" target="_blank")
+  //-         img(src="img/dealer-9.png", alt="")
+  //-       a(href="http://fermach.com/" target="_blank")
+  //-         img(src="img/dealer-10.png", alt="")
+  //-       a(href="http://ramfood.ru/" target="_blank")
+  //-         img(src="img/dealer-11.png", alt="")
+  //-       a(href="http://www.alieparusa.ru/" target="_blank")
+  //-         img(src="img/dealer-12.png", alt="")
 
-    .info.info--offset.row.row--sm-center
-      .col.col--sm-4.col--lg-2
-        img(src="img/info-1.jpg", alt="")
-      .col.col--sm-8.col--lg-4.info__text
-        .info__header Компактность размеров
-        p.info__desc Канистра имеет компактные размеры и легко поместится в холодильнике, не занимая много места
-      .col.col--sm-4.col--lg-2
-        img(src="img/info-2.jpg", alt="")
-      .col.col--sm-8.col--lg-4.info__text
-        .info__header Удобство Формы
-        p.info__desc Продукты легко наливать через широкое горлышко, а благодаря удобной ручке канистру удобно нести в руках.
-    .info.row.row--sm-center
-      .col.col--sm-8.col--lg-4.info__text
-        .info__header Экологичность
-        p.info__desc Канистра выполнена из безопасного и качественного материала, который прекрасно сохраняет свежесть и вкус продукта.
-      .col.col--sm-4.col--lg-2
-        img(src="img/info-3.jpg", alt="")
-      .col.col--sm-8.col--lg-4.info__text
-        .info__header Инновационный формат веса
-        p.info__desc Полезных и вкусных продуктов теперь хватит на всю семью.
-      .col.col--sm-4.col--lg-2
-        img(src="img/info-4.jpg", alt="")
-
-    h2.h2#second-life Вторая жизнь канистры
-    .subtitle Не спешите выбрасывать канистру! Пустая канистра Вам может пригодиться!
-    //- p Поделка из канистры для дачи
-    .slider-for
-      .video
-        iframe(src="https://www.youtube.com/embed/nTxepN_M5JY?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/UQ0wTFolXCM?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/PGEhRDk44ho?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/1CsxfeK2ZTs?ecver=1" frameborder="0" allowfullscreen)
-      .video
-        iframe(src="https://www.youtube.com/embed/Ah2nYJ3kdVA?ecver=1" frameborder="0" allowfullscreen)
-    .slider-nav
-      .slide
-        img(src="img/для животных.jpg", alt="")
-        span Лайфхак для животных: кормушка для птиц
-      .slide
-        img(src="img/для сада.jpg", alt="")
-        span Лайфхак для сада и огорода: садовые инструменты
-      .slide
-        img(src="img/для мелочи.jpg", alt="")
-        span Лайфхак для дома и гаража: коробка под бытовые мелочи
-      .slide
-        img(src="img/для дома.jpg", alt="")
-        span Лайфхак для дома: лейка для полива цветов и держатель для кисточки
-      .slide
-        img(src="img/для дачи.jpg", alt="")
-        span Лайфхак для дачи: горшок для рассады и цветов
-    .idea
-      .idea__item
-        img(src="img/icon-1.jpg", alt="")
-      .idea__item
-        img(src="img/icon-2.jpg", alt="")
-      .idea__item
-        img(src="img/icon-3.jpg", alt="")
-      .idea__item.idea__item--special
-        span Есть свои идеи по использованию канистры?
-        .btn.btn--secondary Напишите нам
-    h2.h2#where Где купить?
-    .row
-      .col.col--md-8.col--md-offset-2
-        .map-description Продукты в канистре «Кубанский молочник» Вы можете приобрести в следующих городах: Москва, Краснодар, Ростов-на-Дону, Сочи, Новороссийск, Анапа, Геленджик, Севастополь, Ялта , Симферополь и других.
-    .map
-      .map__slider
-        a(href="https://5ka.ru/" target="_blank")
-          img(src="img/dealer-1.png", alt="")
-        a(href="http://www.okmarket.ru/" target="_blank")
-          img(src="img/dealer-2.png", alt="")
-        a(href="http://magnit-info.ru/" target="_blank")
-          img(src="img/dealer-3.png", alt="")
-        a(href="https://www.perekrestok.ru/" target="_blank")
-          img(src="img/dealer-4.png", alt="")
-        a(href="https://www.tabris.ru/" target="_blank")
-          img(src="img/dealer-5.png", alt="")
-        a(href="https://www.auchan.ru/" target="_blank")
-          img(src="img/dealer-6.png", alt="")
-        a(href="http://www.victoria-group.ru/" target="_blank")
-          img(src="img/dealer-7.png", alt="")
-        a(href="" target="_blank")
-          img(src="img/dealer-8.png", alt="")
-        a(href="http://www.lenta.com/" target="_blank")
-          img(src="img/dealer-9.png", alt="")
-        a(href="http://fermach.com/" target="_blank")
-          img(src="img/dealer-10.png", alt="")
-        a(href="http://ramfood.ru/" target="_blank")
-          img(src="img/dealer-11.png", alt="")
-        a(href="http://www.alieparusa.ru/" target="_blank")
-          img(src="img/dealer-12.png", alt="")
-
-  .feedback#write
-    h2.h2 Пишите нам!
-    .grid.grid--container
-      .row
-        .col.col--lg-8.col--lg-offset-2
-          form#feedback.form
-            .row
-              .col.col--md-6
-                .form-control
-                  input(type="text" pattern="/^$|\s+/")
-                  label Ваше имя
-                .form-control
-                  input(type="email" pattern="/^$|\s+/")
-                  label Электронная почта
-                .form-control
-                  input(type="tel" pattern="/^$|\s+/")
-                  label Ваш телефон
-              .col.col--md-6
-                .form-control
-                  textarea(pattern="/^$|\s+/")
-                  label Обращение
-            .btn-block
-              button.btn.btn--secondary Отправить
+  //- .feedback#write
+  //-   h2.h2 Пишите нам!
+  //-   .grid.grid--container
+  //-     .row
+  //-       .col.col--lg-8.col--lg-offset-2
+  //-         form#feedback.form
+  //-           .row
+  //-             .col.col--md-6
+  //-               .form-control
+  //-                 input(type="text")
+  //-                 label Ваше имя
+  //-               .form-control
+  //-                 input(type="email")
+  //-                 label Электронная почта
+  //-               .form-control
+  //-                 input(type="tel")
+  //-                 label Ваш телефон
+  //-             .col.col--md-6
+  //-               .form-control
+  //-                 textarea
+  //-                 label Обращение
+  //-           .btn-block
+  //-             button.btn.btn--secondary Отправить
 
 
 

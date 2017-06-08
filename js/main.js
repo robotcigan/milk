@@ -48,37 +48,41 @@ $(document).ready(function() {
   $('.hero__dots span').on('click', function () {
     let index = $(this).index();
     let hero = $('.hero');
-    function heroColor (color) {
-      hero.removeClass();
-      hero.addClass('hero');
-      hero.addClass(color);
-    }
-    switch (index) {
-      case 0:
-        heroColor('hero--first');
-        break;
-      case 1:
-        heroColor('hero--second')
-        break;
-      case 2:
-        heroColor('hero--third')
-        break;
-      case 3:
-        heroColor('hero--4th')
-        break;
-      case 4:
-        heroColor('hero--5th')
-        break;
-      case 5:
-        heroColor('hero--6th')
-        break;
-      default:
-        break;
-    }
-    $('.hero__dots span').removeClass('active');
-    $('.hero__slider .hero__slide').eq(index).find('.hero__dots span').eq(index).addClass('active');
-    $('.hero__slider .hero__slide').removeClass('hero__slide--active');
-    $('.hero__slider .hero__slide').eq(index).addClass('hero__slide--active');
+    // SVG колдунство
+    $('#bar').css({
+      'stroke-dashoffset': `${200 - (180 / 6 * index)}rem`
+    })
+    // function heroColor (color) {
+    //   hero.removeClass();
+    //   hero.addClass('hero');
+    //   hero.addClass(color);
+    // }
+    // switch (index) {
+    //   case 0:
+    //     heroColor('hero--first');
+    //     break;
+    //   case 1:
+    //     heroColor('hero--second')
+    //     break;
+    //   case 2:
+    //     heroColor('hero--third')
+    //     break;
+    //   case 3:
+    //     heroColor('hero--4th')
+    //     break;
+    //   case 4:
+    //     heroColor('hero--5th')
+    //     break;
+    //   case 5:
+    //     heroColor('hero--6th')
+    //     break;
+    //   default:
+    //     break;
+    // }
+    // $('.hero__dots span').removeClass('active');
+    // $('.hero__slider .hero__slide').eq(index).find('.hero__dots span').eq(index).addClass('active');
+    // $('.hero__slider .hero__slide').removeClass('hero__slide--active');
+    // $('.hero__slider .hero__slide').eq(index).addClass('hero__slide--active');
   });
 
   // Слайдеры
@@ -166,7 +170,44 @@ $(document).ready(function() {
 
   // Модалка
   $('.open-modal').magnificPopup({
-      type: 'inline'
-    });
+    type: 'inline'
+  });
+
+  // Поля
+  $('.form-control input').on('keyup change', function () {
+    formValidation($(this));
+  });
+  $('.form-control textarea').on('keyup change', function () {
+    formValidation($(this));
+  });
+
+  function formValidation (self) {
+    if ( self.val().length || self.text().length ) {
+      self.parent().find('label').addClass('form-control__label--active');
+    } else {
+      self.parent().find('label').removeClass('form-control__label--active');
+    }
+  }
+
+  // SVG колдунство
+  var val = 70;
+  var $circle = $('#svg #bar');
+  
+  if (isNaN(val)) {
+   val = 100; 
+  }
+  else{
+    var r = $circle.attr('r');
+    var c = Math.PI*(r*2);
+   
+    if (val < 0) { val = 0;}
+    if (val > 100) { val = 100;}
+    
+    var pct = ((100-val)/100)*c;
+    
+    $circle.css({ strokeDashoffset: pct});
+    
+    $('#cont').attr('data-pct',val);
+  }
 
 })

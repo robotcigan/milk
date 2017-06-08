@@ -63,6 +63,11 @@ body * {
   transition: all 0.2s;
   max-width: 100%;
 }
+.form-control label.form-control__label--active {
+  color: #111;
+  font-size: 1.2rem;
+  top: 8px;
+}
 .form-control input[type="text"],
 .form-control input[type="password"],
 .form-control input[type="date"],
@@ -84,19 +89,6 @@ body * {
   resize: vertical;
   width: 100%;
   -webkit-appearance: none;
-}
-.form-control input[type="text"]:invalid + label,
-.form-control input[type="password"]:invalid + label,
-.form-control input[type="date"]:invalid + label,
-.form-control input[type="email"]:invalid + label,
-.form-control input[type="tel"]:invalid + label,
-.form-control input[type="number"]:invalid + label,
-.form-control select:invalid + label,
-.form-control textarea:invalid + label,
-.form-control .select2-selection--single:invalid + label {
-  color: #111;
-  font-size: 1.2rem;
-  top: 8px;
 }
 .form-control input[type="text"]:focus + label,
 .form-control input[type="password"]:focus + label,
@@ -571,6 +563,32 @@ p {
 }
 .empty {
   height: 20rem;
+}
+.hero__slider {
+  position: relative;
+}
+.circle-svg {
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+}
+#svg {
+  height: 100%;
+  width: 100%;
+}
+#svg #bar {
+  stroke-dasharray: 200rem;
+  stroke-dashoffset: 160rem;
+  transition: stroke-dashoffset 0.8s ease;
+  r: 50%;
+  stroke: #ffca3b;
+  stroke-width: 3px;
+  cx: 50%;
+  cy: 50%;
 }
 .main-header {
   color: #fff;

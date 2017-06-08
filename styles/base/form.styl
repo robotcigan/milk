@@ -11,6 +11,10 @@
     top 16px
     transition all .2s
     max-width 100%
+    &.form-control__label--active
+      color $main
+      font-size 1.2rem
+      top 8px
   input[type="text"],
   input[type="password"],
   input[type="date"],
@@ -32,11 +36,11 @@
     resize vertical
     width 100%
     -webkit-appearance none
-    &:invalid
-      & + label
-        color $main
-        font-size 1.2rem
-        top 8px
+    // &:invalid
+    //   & + label
+    //     color $main
+    //     font-size 1.2rem
+    //     top 8px
     &:focus
       // border-color $primary
       & + label

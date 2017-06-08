@@ -197,6 +197,31 @@
 .empty
   height 20rem
 
+.hero__slider
+  position relative
+
+.circle-svg
+  right  0
+  position absolute
+  top 0
+  z-index 20
+  circle(100%)
+  transform rotate(-90deg)
+
+#svg
+  circle(100%)
+  #bar
+    // stroke-dashoffset 0
+    stroke-dasharray 200rem
+    stroke-dashoffset 160rem
+    transition stroke-dashoffset .8s ease
+    r 50%
+    stroke $secondary
+    stroke-width 3px
+    // cx 27.9rem
+    // cy 27.9rem
+    cx 50%
+    cy 50%
 
 .main-header
   color #fff
@@ -209,6 +234,7 @@
   transition all .2s ease
   width 100%
   z-index 50
+  chromefix()
   &__top
     position relative
     .btn
